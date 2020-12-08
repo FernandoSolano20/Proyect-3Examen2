@@ -1,0 +1,53 @@
+{
+  "name": "Deparment",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "Status",
+      "fieldValues": "Activo,Desactivo",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "deparment",
+      "relationshipName": "employee"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "leadership",
+      "otherEntityRelationshipName": "deparment",
+      "relationshipName": "leader",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201208065403",
+  "entityTableName": "deparment",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

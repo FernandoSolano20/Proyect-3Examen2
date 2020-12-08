@@ -1,0 +1,24 @@
+{
+  "examenApp": {
+    "leadership": {
+      "home": {
+        "title": "Leaderships",
+        "createLabel": "Create a new Leadership",
+        "createOrEditLabel": "Create or edit a Leadership",
+        "notFound": "No Leaderships found"
+      },
+      "created": "A new Leadership is created with identifier {{ param }}",
+      "updated": "A Leadership is updated with identifier {{ param }}",
+      "deleted": "A Leadership is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Leadership {{ id }}?"
+      },
+      "detail": {
+        "title": "Leadership"
+      },
+      "startDate": "Start Date",
+      "deparment": "Deparment",
+      "employee": "Employee"
+    }
+  }
+}

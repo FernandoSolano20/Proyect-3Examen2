@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="employee">
+            <h2><span jhiTranslate="examenApp.employee.detail.title">Employee</span> {{ employee.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="examenApp.employee.name">Name</span></dt>
+                <dd>
+                    <span>{{ employee.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ employee.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.secondLastName">Second Last Name</span></dt>
+                <dd>
+                    <span>{{ employee.secondLastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.sex">Sex</span></dt>
+                <dd>
+                    <span>{{ employee.sex }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.birthdayDate">Birthday Date</span></dt>
+                <dd>
+                    <span>{{ employee.birthdayDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.entryDate">Entry Date</span></dt>
+                <dd>
+                    <span>{{ employee.entryDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.position">Position</span></dt>
+                <dd>
+                    <span>{{ employee.position }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.salary">Salary</span></dt>
+                <dd>
+                    <span>{{ employee.salary }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.state">State</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'examenApp.Status.' + employee.state }}">{{ employee.state }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.employee.deparment">Deparment</span></dt>
+                <dd>
+                    <div *ngIf="employee.deparment">
+                        <a [routerLink]="['/deparment', employee.deparment?.id, 'view']">{{ employee.deparment?.name }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/employee', employee.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

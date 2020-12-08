@@ -1,0 +1,26 @@
+{
+  "examenApp": {
+    "deparment": {
+      "home": {
+        "title": "Deparments",
+        "createLabel": "Create a new Deparment",
+        "createOrEditLabel": "Create or edit a Deparment",
+        "notFound": "No Deparments found"
+      },
+      "created": "A new Deparment is created with identifier {{ param }}",
+      "updated": "A Deparment is updated with identifier {{ param }}",
+      "deleted": "A Deparment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Deparment {{ id }}?"
+      },
+      "detail": {
+        "title": "Deparment"
+      },
+      "name": "Name",
+      "description": "Description",
+      "state": "State",
+      "employee": "Employee",
+      "leader": "Leader"
+    }
+  }
+}

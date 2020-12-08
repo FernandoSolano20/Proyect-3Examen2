@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="leadership">
+            <h2><span jhiTranslate="examenApp.leadership.detail.title">Leadership</span> {{ leadership.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="examenApp.leadership.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{ leadership.startDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="examenApp.leadership.deparment">Deparment</span></dt>
+                <dd>
+                    <div *ngIf="leadership.deparment">
+                        <a [routerLink]="['/deparment', leadership.deparment?.id, 'view']">{{ leadership.deparment?.name }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="examenApp.leadership.employee">Employee</span></dt>
+                <dd>
+                    <div *ngIf="leadership.employee">
+                        <a [routerLink]="['/employee', leadership.employee?.id, 'view']">{{ leadership.employee?.name }} {{ leadership.employee?.lastName }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/leadership', leadership.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

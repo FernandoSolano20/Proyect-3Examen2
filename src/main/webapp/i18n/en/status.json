@@ -1,0 +1,9 @@
+{
+  "examenApp": {
+    "Status": {
+      "null": "",
+      "Activo": "Activo",
+      "Desactivo": "Desactivo"
+    }
+  }
+}

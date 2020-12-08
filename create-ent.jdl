@@ -1,0 +1,34 @@
+enum Status {
+	Activo, Desactivo
+}
+
+entity Employee {
+    name String required
+    lastName String required
+    secondLastName String required
+    sex String required
+    birthdayDate ZonedDateTime required
+    entryDate ZonedDateTime required
+    position String required
+    salary Integer required min(1)
+    state Status required
+}
+
+entity Deparment {
+	name String required
+    description String required
+    state Status required
+}
+
+entity Leadership {
+	startDate ZonedDateTime required
+}
+
+relationship OneToOne {
+	Leadership{deparment} to Deparment{leader}  
+}
+
+relationship OneToMany {
+	Deparment{employee} to Employee{deparment}
+    Employee{leader} to Leadership{employee}
+}
