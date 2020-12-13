@@ -37,7 +37,10 @@
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "salty-lowlands-35748",
+    "herokuDeployType": "jar",
+    "herokuJavaVersion": "14"
   },
   "entities": []
 }

@@ -1,0 +1,10 @@
+Diseño del JDL: Modelo JDL.PNG, create-ent.jdl
+URL https://salty-lowlands-35748.herokuapp.com/
+Usuario: admin
+Password: admin
+
+Correr aplicacion
+1- Vaya al root de la aplicacion
+2- Digite en un cmd npm install
+3- Digite npm start
+4- Corra el backend en intellij
